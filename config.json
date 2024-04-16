@@ -1,0 +1,51 @@
+{
+    "title":"RSS Config"
+   ,"feeds":{
+       "infosurabayaterkini":    
+       {    "feed_title":"InfoSurabayaTerkini"
+           ,"feed_desc":"Update berita tentang Surabaya terkini"
+           ,"feed_link":"https://app.xkamui.eu.org/rss/temp/infosurabayaterkini.xml"
+           ,"active":true
+           ,"allowed_tags":"<p><img><strong><br>"
+           ,"replaced_strings": ["(Feed generated with FetchRSS)"]
+           ,"replacement_strings": [""]
+           ,"string_replacements": [{"replaced":"xx","replacement":""}]
+           ,"link_in_content": false
+           ,"cache_control":"Cache-Control: public, max-age=3600"
+           ,"debug":false
+           ,"feeds": [
+               {    "url":"https://app.xkamui.eu.org/rss/waktu-sholat-surabaya.php"
+                   ,"active":false
+               },
+               {    "url":"https://app.xkamui.eu.org/rss/temp/islam.xml"
+                   ,"active":true
+                   ,"noTitle":false
+                   ,"noDescription":true
+               },
+               {    "url":"https://app.xkamui.eu.org/rss/prayer-times-surabaya.php"
+                   ,"active":true
+               },
+               {    "url":"https://www.disway.id/feed/"
+                   ,"active":false 
+               },
+               {    "url":"https://www.suarasurabaya.net/feed/"
+                   ,"active":true
+                   ,"item_limit":50
+               },
+               {    "url":"https://www.jawapos.com/surabaya/feed/"
+                   ,"active":true
+               },
+               {    "url":"https://rsshub.app/telegram/channel/kompascomupdate"
+                   ,"active":false
+               }
+           ]
+       }       
+   },
+   "generate":{
+       "infosurabayaterkini": {
+            "url":"infosurabayaterkini.php"
+           ,"target":"temp/infosurabayaterkini.xml"
+           ,"active":true
+       }
+   }
+}

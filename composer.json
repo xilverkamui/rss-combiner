@@ -1,0 +1,15 @@
+{
+    "name": "codespace/rss-combiner",
+    "description": "RSS Combiner",
+    "type": "project",
+    "require": {
+        "simplepie/simplepie": "^1.8"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Xilver Kamui",
+            "email": "112789454+xilverkamui@users.noreply.github.com"
+        }
+    ]
+}
