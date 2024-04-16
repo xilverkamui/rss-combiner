@@ -1,11 +1,12 @@
 <?php 
-require_once ('../vendor/autoload.php');
+require_once ('vendor/autoload.php');
+$CONFIG_LOCATION = 'config.json';
 
 $debug = false;
 $name = "";
 if (isset($_GET['name']))   $output = $_GET['name'];
 
-$config = json_decode(file_get_contents('config.json'),false);
+$config = json_decode(file_get_contents($CONFIG_LOCATION),false);
 if ($config === null) die ('Ada kesalahan pada config');
 //($name != "") ? $feed = $config -> feeds -> $name; : $feed = $config -> feeds[0];
 $feed = $config -> feeds -> infosurabayaterkini;
