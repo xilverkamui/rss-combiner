@@ -8,12 +8,11 @@ if (isset($_GET['name']))   $output = $_GET['name'];
 
 $config = json_decode(file_get_contents($CONFIG_LOCATION),false);
 if ($config === null) die ('Ada kesalahan pada config');
-//($name != "") ? $feed = $config -> feeds -> $name; : $feed = $config -> feeds[0];
-$feed = $config -> feeds -> infosurabayaterkini;
+//$feed = $config -> feeds -> infosurabayaterkini;
+$feed = ($name == "" ? reset($config -> feeds) : $config -> feeds -> $name);
 
 if ($feed -> debug)  $debug = $feed -> debug ;
 if (isset($_GET['debug']))   $debug = $_GET['debug'];
-
 
 $rss = generateRss($feed);
 if (!$debug) {
